@@ -1,0 +1,17 @@
+{{numberSubject}}
+<hr>
+<div *ngIf="fetchedData">
+  <h2>Dohvaćeni podaci:</h2>
+  <p>{{ fetchedData | json }}</p>
+</div>
+<div *ngIf="!fetchedData">
+  <p>Loading...</p>
+</div>
+
+<div *ngIf="fetchDataObs$ | async as data">
+  {{ data | json }}
+</div>
+<br>
+<div *ngIf="fetchData$ | async as data">
+  {{ data | json }}
+</div>
